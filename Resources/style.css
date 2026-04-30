@@ -1,0 +1,281 @@
+:root {
+    color-scheme: dark;
+    --bg: #12100f;
+    --bg-soft: #1a1715;
+    --panel: #1f1a17;
+    --text: #f1e9df;
+    --muted: #b2a89c;
+    --accent: #b18a53;
+    --accent-strog: #d4ac6b;
+    --line: rgba(224, 197, 160, 0.2);
+    --shadow: rgba(0,0,0,0.45);
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-theme {
+    background: radial-gradient(circle at top right, rgba(154,117, 73, 0.1), transparent 50%), var(--bg);
+    color: var(--text);
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antique", Palatino, serif;
+    min-height: 100vh;
+    line-height: 1.55;
+}
+
+a {
+    color: inherit;
+}
+
+#page-shell {
+    min-height: 100vh;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    background: rgba(18, 16, 15, 0.75);
+    border-bottom: 1px solid var(--line);
+}
+
+.site-header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brandmark {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.site-nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--text);
+}
+
+.hero,
+.section-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 20px;
+}
+
+.hero h1 {
+    margin: 8px 0 18px;
+    max-width: 700px;
+    font-size: clamp(2rem, 5vww, 4rem);
+    line-height: 1.1;
+}
+
+.hero > p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.11rem;
+    font-size: 0.8rem;
+    color: var(--accent-strog)
+}
+
+.hero-actions,
+.age-gate-actions {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    border: 1px solid transparent;
+    padding: 11px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #18110a;
+}
+
+.btn-primary:hover,
+.btn-secondary:focus-visible {
+    background: var(--accent-strog);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--line);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    border-color: var(--accent);
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 700px;
+}
+
+.botanical-grid,
+.tasting-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.botanical-card,
+.tasting-note {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255,255,255, 0.01));
+    box-shadow: 0 12px 40px -26px var(--shadow);
+}
+
+.botanical-card {
+    padding: 20px;
+}
+
+.botanical-card h3 {
+    margin: 0 0 8px;
+}
+
+.botanical-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.tasting-note {
+    text-align: left;
+    width: 100%;
+    padding: 18px;
+    color: inherit;
+    cursor: pointer;
+    background-color: var(--panel);
+}
+
+.note-title {
+    display: block;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+    color: var(--accent-strog);
+}
+
+.note-description {
+    color: var(--muted);
+}
+
+.tasting-note.is-active {
+    border-color: var(--accent);
+}
+
+.map-section #map {
+    margin-top: 28px;
+    height: 340px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.stocklist-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+    color: var(--muted);
+}
+
+.age-gate-overlay {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,0.7);
+    z-index: 40;
+    padding: 20px;
+}
+
+.age-gate-modal h2 {
+    margin-top: 8px;
+}
+
+.age-gate-modal p {
+    color: var(--muted);
+}
+
+body.gate-open main,
+body.gate-open .site-header,
+body.gate-open .site-footer {
+    filter: blur(3px);
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.site-footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+    background: rgba(255,255,255, 0.02);
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

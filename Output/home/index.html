@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head><title>Home</title><meta name="twitter:title" content="Home"/><meta property="og:title" content="Home"/><link rel="stylesheet" href="/style.css" type="text/css"/><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="description" content="Single Forest Gin by Ardent & Oak. Discover the story, botanicals, tasting notes, and Stockists"/><meta name="theme-color" content="#12100f"/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script><script src="/app.js" defer></script></head><body class="dark-theme"><div id="age-gate" class="age-gate-overlay">
+    <div class="age-gate-modal" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+        <p class="eyebrow"> Age Verification </p>
+        <h2 id="age-gate-title"> Welcome to Ardent &amp; Oak </h2>
+        <p> This website contains alcoholic-related content. Please confirm that you are of legal drinking age in your country. </p>
+        <div class="age-gate-actions">
+            <button id="age-yes" class="btn-primary" type="button"> Yes, Enter </button>
+            <a id="age-no" class="btn-secondary" href="https://www.responsibility.org">No, Leave </a>
+        </div>
+    </div>
+</div><section id="story" class="hero">
+    <p class="eyebrow"> Ardent &amp; Oak </p>
+    <h1>Single Forest Gin</h1>
+
+    <p> A contemplative Spirit distilled with hand-forged botanicals and matured in oak for uncommon depth. </p>
+
+    <div class="hero-actions">
+        <a class="btn-primary" href="#botanicals">Explore Botanicals</a>
+        <a class="btn-secondary" href="#stocklists">Find a stocklist</a>
+    </div>
+</section><section id="botanicals" class="section-shell">
+    <div class="section-heading">
+        <h2>Botanical Profiles</h2>
+        <p>Every batch begins with a day forage and is proofed slowly to preserve aromatic detail. </p>
+    </div>
+    <div class="botanical-grid">
+        <article class="botanical-card">
+            <h3> Juniper </h3>
+            <p> Wild Macedonian Juniper lends resinous structure and a cooling alpine edge </p>
+        </article>
+        <article class="botanical-card">
+            <h3> Scots Pine Tip </h3>
+            <p> Fresh spring tips contribute green lift, sap brightness, and a forest-floor aroma. </p>
+        </article>
+        <article class="botanical-card">
+            <h3> Angelica Root </h3>
+            <p> A dry, earthy anchor that extends the finish and ties citrus to oak spice. </p>
+        </article>
+        <article class="botanical-card">
+            <h3> Dried Orange Peel </h3>
+            <p> Bittersweet oils open the palate with elegant warmth and candied zest. </p>
+        </article>
+    </div>
+</section>    <section id="tasting-notes" class="section-shell tasting-notes">
+        <div class="section-heading">
+            <h2>Interactive Tasting Notes</h2>
+            <p>Select a stage to reveal how the flavor evolves from first aroma to finish.</p>
+        </div>
+        <div class="tasting-grid">
+            <button class = "tasting-note" type="button" data-note="nose">
+                <span class="note-title">Nose</span>
+                <span class="note-description">Rain-soaked cedar, crushed juniper, and a suggestion of orange marmalade</span>
+            </button>
+
+            <button class = "tasting-note" type="button" data-note="palate">
+                <span class="note-title">Palate</span>
+                <span class="note-description">Silken entry with bright pine, lifted citrus oils, and warm botanical spice.</span>
+            </button>
+
+            <button class = "tasting-note" type="button" data-note="mid">
+                <span class="note-title">Mid</span>
+                <span class="note-description">Oak-aged character unfolds as cocoa husk, vanilla pod, and dry tea tannin.</span>
+            </button>
+
+            <button class = "tasting-note" type="button" data-note="finish">
+                <span class="note-title">Finish</span>
+                <span class="note-description">Long, clean, and slightly smoky, with a mineral snap and returning citrus. </span>
+            </button>
+
+
+        </div>
+            
+        
+    </section><section id="stockists" class="section-shell map-section">
+    <div class="section-heading">
+        <h2>Where to buy</h2>
+        <p>Explore selected stockists carrying single Forest Gin. Locations are provided as a demonstration dataset.</p>
+    </div>
+    <div id="map" role="application" aria-label="Map showing mock stocklist locations"></div>
+    <ul class="stocklist-list">
+        <li> Black Pine Bottle House - London </li>
+        <li> Oak &amp; Ether Fine Spirits - Edinburgh </li>
+        <li> The Glass Ledger - Bristol </li>
+    </ul>
+</section><footer class="site-footer">
+    <p> &copy; 2026 Ardent &amp; Oak. Crafted for adventurous palates </p>
+</footer></body></html>
